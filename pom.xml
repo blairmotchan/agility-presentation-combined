@@ -6,7 +6,7 @@
     <groupId>com.labelinsight</groupId>
     <artifactId>agility</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <name>agility</name>
     <description>Project for Accelerating Agility with Tech</description>
@@ -66,6 +66,7 @@
     <build>
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+        <finalName>agility-combined</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -111,6 +112,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
