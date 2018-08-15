@@ -29,7 +29,7 @@ class AttendeeController(
 
     @RequestMapping(method = [POST])
     fun createAttendee(@RequestBody command: AttendeeCommand): Attendee {
-        val attendee = Attendee(0, command.name, HashSet())
+        val attendee = Attendee(0, command.name)
         attendeeRepository.save(attendee)
         return attendee
     }

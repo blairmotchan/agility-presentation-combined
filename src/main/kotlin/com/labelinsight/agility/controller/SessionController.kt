@@ -28,7 +28,7 @@ class SessionController(
 
     @RequestMapping(method = [POST])
     fun createSession(@RequestBody command: SessionCommand): Session {
-        val session = Session(0, command.name, HashSet())
+        val session = Session(0, command.name)
         sessionRepository.save(session)
         return session
     }
