@@ -8,5 +8,5 @@ open class RegistrationApplication
 
 @Throws(InterruptedException::class)
 fun main(args: Array<String>) {
-    runApplication<RegistrationApplication>(*args).close()
+    runApplication<RegistrationApplication>(*args)
 }

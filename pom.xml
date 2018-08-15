@@ -10,6 +10,7 @@
         <module>agility-combined</module>
         <module>agility-attendee-sessions</module>
         <module>agility-registration</module>
+        <module>agility-contract</module>
     </modules>
     <packaging>pom</packaging>
 
