@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus.OK
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.bind.annotation.RequestMethod.POST
 
+@CrossOrigin
 @RestController
 @RequestMapping("/registration")
 class RegistrationController(
