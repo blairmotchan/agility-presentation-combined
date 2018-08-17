@@ -21,6 +21,9 @@ jobs:
       MAVEN_OPTS: -Xmx3200m
 
     steps:
+    - add_ssh_keys:
+        fingerprints:
+        - "ab:7c:42:ae:be:ba:55:bc:1d:50:f3:5b:57:5e:23:25"
     - checkout
 
     # Download and cache dependencies
@@ -45,6 +48,3 @@ jobs:
     - run: mvn integration-test
   deploy-job:
     steps:
-    - add_ssh_keys:
-        fingerprints:
-        - "ab:7c:42:ae:be:ba:55:bc:1d:50:f3:5b:57:5e:23:25"
