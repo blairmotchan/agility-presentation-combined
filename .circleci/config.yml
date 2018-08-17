@@ -43,3 +43,8 @@ jobs:
     # run tests!
     - run: mvn clean install -DskipTests
     - run: mvn integration-test
+  deploy-job:
+    steps:
+    - add_ssh_keys:
+        fingerprints:
+        - "ab:7c:42:ae:be:ba:55:bc:1d:50:f3:5b:57:5e:23:25"

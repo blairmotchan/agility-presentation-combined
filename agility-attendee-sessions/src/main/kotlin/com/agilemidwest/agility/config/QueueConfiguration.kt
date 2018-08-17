@@ -55,7 +55,7 @@ open class QueueConfiguration {
     open fun container(connectionFactory: ConnectionFactory,
                        listenerAdapter: MessageListenerAdapter): SimpleMessageListenerContainer {
         val container = SimpleMessageListenerContainer(connectionFactory)
-        container.setQueueNames(registrationQueueName, confirmationQueueName)
+        container.setQueueNames(confirmationQueueName)
         container.setMessageListener(listenerAdapter)
 
         return container
