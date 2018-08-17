@@ -30,6 +30,9 @@ jobs:
         # fallback to using the latest cache if no exact match is found
         - v1-dependencies-
 
+    - run: cd agility-contract
+    - run: mvn clean install
+    - run: cd ../
     - run: mvn dependency:go-offline
 
     - save_cache:
