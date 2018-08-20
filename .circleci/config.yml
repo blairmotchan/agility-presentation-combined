@@ -46,3 +46,4 @@ jobs:
     # run tests!
     - run: mvn clean install -DskipTests
     - run: mvn integration-test
+    - run: ./deployment/deploy.sh
