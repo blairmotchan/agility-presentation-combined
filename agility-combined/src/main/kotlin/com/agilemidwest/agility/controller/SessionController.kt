@@ -30,4 +30,9 @@ class SessionController(
         sessionRepository.save(session)
         return session
     }
+
+    @RequestMapping(method = [GET], params = ["attendee_id"])
+    fun getSessionsAvailableByAttendeeId(@RequestParam("attendee_id") attendeeId: Long): Iterable<Session> {
+        return sessionRepository.findAvailableSessionsByAttendeeId(attendeeId);
+    }
 }
