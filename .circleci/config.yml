@@ -33,9 +33,6 @@ jobs:
         # fallback to using the latest cache if no exact match is found
         - v1-dependencies-
 
-    - run: cd agility-contract
-    - run: mvn clean install
-    - run: cd ../
     - run: mvn dependency:go-offline
 
     - save_cache:
@@ -44,7 +41,5 @@ jobs:
         key: v1-dependencies-{{ checksum "pom.xml" }}
 
     # run tests!
-    - run: mvn clean install -DskipTests
-    - run: mvn integration-test
-    - run: chmod a+x deployment/deploy.sh
+    - run: mvn clean package
     - run: ./deployment/deploy.sh
